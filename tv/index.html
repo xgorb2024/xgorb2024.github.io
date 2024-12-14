@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-GORB TV LIVE</title>
+    <link href="https://vjs.zencdn.net/7.19.2/video-js.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url("https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/baike/crop%3D0%2C0%2C1280%2C720%3Bw%3D1280%3Bq%3D100/sign=a5f4ccdbbba1cd11aebd28bc46e406cf.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .banner {
+            background-color: yellow;
+            text-align: center;
+            padding: 10px 0;
+            color: black;
+        }
+        .navbar {
+            background-color: rgba(51, 51, 51, 0.8);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        .navbar a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .dropdown {
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            font-size: 16px;    
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .logo img {
+            height: 50px;
+            margin-left: 20px;
+        }
+        .video-container {
+            width: 100%;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        video {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        footer {
+            background-color: rgba(51, 51, 51, 0.8);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        电视直播流URL投稿（我们需要您的投稿，这样您就可以看到更多的电视台）QQ：3813294268、WeChat：X-GORB、QQ群：985565412
+    </div>
+
+    <div class="navbar">
+        <a href="index.html"><img src="https://xgorb.cn/tv_logo.png" alt="X-GORB Logo"></a>
+        <a href="index.html">首页</a>
+        <div class="dropdown">
+            <button class="dropbtn">电视台 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="palestine360tv.html">巴勒斯坦360TV</a>
+                <a href="egypttv.html">埃及电视台</a>
+                <a href="zhangputv.html">漳浦综合HD</a>
+            </div>
+        </div> 
+    </div>
+
+    <div class="video-container">
+        <video id="video-player" class="video-js vjs-default-skin" controls preload="auto">
+            <source src="http://cdn3.toronto360.tv:8081/toronto360/hd/playlist.m3u8" type="application/x-mpegURL">
+            您的浏览器不支持HTML5视频标签。
+        </video>
+    </div>
+
+    <footer>
+        2024 X-GORB Studio. All rights reserved.
+    </footer>
+
+    <script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var player = videojs('video-player');
+            player.play();
+        });
+    </script>
+</body>
+</html>
+
+
+
