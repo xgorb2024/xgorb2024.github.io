@@ -1,0 +1,130 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #003366; /* 深蓝色背景 */
+}
+
+header, footer {
+    background-color: #f2f2f2; /* 白色背景 */
+    color: #000; /* 黑色字体 */
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo a {
+    color: #000; /* 黑色字体 */
+    text-decoration: none;
+    font-size: 18px; /* 字体缩小 */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: #000; /* 黑色字体 */
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.nav-links li a.active {
+    background-color: #007bff; /* 蓝色背景 */
+    color: white; /* 白色文字 */
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #e0e0e0;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.item {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.bit, .edition, .date {
+    background-color: #e0e0e0;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.download {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #f2f2f2; /* 白色背景 */
+    color: #000; /* 黑色字体 */
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Ensure footer is at the bottom of the content */
+}
